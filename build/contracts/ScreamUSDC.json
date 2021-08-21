@@ -1,0 +1,2161 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "borrowPlatform",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "compLpAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "compTokenAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "comptrollerAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lendPlatform",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "11": "contracts/vaults/USDCScreamSpooky.sol",
+    "4": "contracts/lenders/ilend.sol",
+    "5": "contracts/lenders/scream.sol",
+    "8": "contracts/vaultHelpers.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/vaults/USDCScreamSpooky.sol",
+    "exportedSymbols": {
+      "ScreamUSDC": [
+        748
+      ],
+      "SpookyUSDC": [
+        769
+      ],
+      "leverageTest": [
+        808
+      ]
+    },
+    "id": 809,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 732,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:11"
+      },
+      {
+        "absolutePath": "contracts/farms/spooky.sol",
+        "file": "../farms/spooky.sol",
+        "id": 733,
+        "nodeType": "ImportDirective",
+        "scope": 809,
+        "sourceUnit": 4037,
+        "src": "57:29:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "contracts/lenders/scream.sol",
+        "file": "../lenders/scream.sol",
+        "id": 734,
+        "nodeType": "ImportDirective",
+        "scope": 809,
+        "sourceUnit": 587,
+        "src": "87:31:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "contracts/token.sol",
+        "file": "../token.sol",
+        "id": 735,
+        "nodeType": "ImportDirective",
+        "scope": 809,
+        "sourceUnit": 3634,
+        "src": "119:22:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "contracts/vaultHelpers.sol",
+        "file": "../vaultHelpers.sol",
+        "id": 736,
+        "nodeType": "ImportDirective",
+        "scope": 809,
+        "sourceUnit": 2097,
+        "src": "142:29:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 737,
+              "name": "Scream",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 586,
+              "src": "196:6:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Scream_$586",
+                "typeString": "contract Scream"
+              }
+            },
+            "id": 738,
+            "nodeType": "InheritanceSpecifier",
+            "src": "196:6:11"
+          }
+        ],
+        "contractDependencies": [
+          586,
+          906
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 748,
+        "linearizedBaseContracts": [
+          748,
+          586,
+          906
+        ],
+        "name": "ScreamUSDC",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "baseFunctions": [
+              824
+            ],
+            "body": {
+              "id": 746,
+              "nodeType": "Block",
+              "src": "272:66:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "307845343541633334453532383930376430413032333961623544623530373638383037304232306266",
+                    "id": 744,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "289:42:11",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    },
+                    "value": "0xE45Ac34E528907d0A0239ab5Db507688070B20bf"
+                  },
+                  "functionReturnParameters": 743,
+                  "id": 745,
+                  "nodeType": "Return",
+                  "src": "282:49:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "3ad184e4",
+            "id": 747,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lendPlatform",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 740,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "245:8:11"
+            },
+            "parameters": {
+              "id": 739,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "230:2:11"
+            },
+            "returnParameters": {
+              "id": 743,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 742,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 747,
+                  "src": "263:7:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 741,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "263:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "262:9:11"
+            },
+            "scope": 748,
+            "src": "209:129:11",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 809,
+        "src": "173:167:11"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 749,
+              "name": "Spooky",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4036,
+              "src": "365:6:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Spooky_$4036",
+                "typeString": "contract Spooky"
+              }
+            },
+            "id": 750,
+            "nodeType": "InheritanceSpecifier",
+            "src": "365:6:11"
+          }
+        ],
+        "contractDependencies": [
+          4036,
+          4192
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 769,
+        "linearizedBaseContracts": [
+          769,
+          4036,
+          4192
+        ],
+        "name": "SpookyUSDC",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "baseFunctions": [
+              4067
+            ],
+            "body": {
+              "id": 758,
+              "nodeType": "Block",
+              "src": "435:66:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "307832623443373664306463313642453143333144344331444335336246394234353938374663373563",
+                    "id": 756,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "452:42:11",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    },
+                    "value": "0x2b4C76d0dc16BE1C31D4C1DC53bF9B45987Fc75c"
+                  },
+                  "functionReturnParameters": 755,
+                  "id": 757,
+                  "nodeType": "Return",
+                  "src": "445:49:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "6c1a35be",
+            "id": 759,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "farmLP",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 752,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "408:8:11"
+            },
+            "parameters": {
+              "id": 751,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "393:2:11"
+            },
+            "returnParameters": {
+              "id": 755,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 754,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 759,
+                  "src": "426:7:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 753,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "426:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "425:9:11"
+            },
+            "scope": 769,
+            "src": "378:123:11",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              4073
+            ],
+            "body": {
+              "id": 767,
+              "nodeType": "Block",
+              "src": "564:25:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "32",
+                    "id": 765,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "581:1:11",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_2_by_1",
+                      "typeString": "int_const 2"
+                    },
+                    "value": "2"
+                  },
+                  "functionReturnParameters": 764,
+                  "id": 766,
+                  "nodeType": "Return",
+                  "src": "574:8:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "827907b4",
+            "id": 768,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "farmPid",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 761,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "537:8:11"
+            },
+            "parameters": {
+              "id": 760,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "522:2:11"
+            },
+            "returnParameters": {
+              "id": 764,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 763,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 768,
+                  "src": "555:7:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 762,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "555:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "554:9:11"
+            },
+            "scope": 769,
+            "src": "506:83:11",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 809,
+        "src": "342:249:11"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 770,
+              "name": "ERC20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1530,
+              "src": "622:5:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC20_$1530",
+                "typeString": "contract ERC20"
+              }
+            },
+            "id": 771,
+            "nodeType": "InheritanceSpecifier",
+            "src": "622:5:11"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 772,
+              "name": "ERC20Detailed",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1585,
+              "src": "629:13:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC20Detailed_$1585",
+                "typeString": "contract ERC20Detailed"
+              }
+            },
+            "id": 773,
+            "nodeType": "InheritanceSpecifier",
+            "src": "629:13:11"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 774,
+              "name": "ScreamUSDC",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 748,
+              "src": "644:10:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ScreamUSDC_$748",
+                "typeString": "contract ScreamUSDC"
+              }
+            },
+            "id": 775,
+            "nodeType": "InheritanceSpecifier",
+            "src": "644:10:11"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 776,
+              "name": "SpookyUSDC",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 769,
+              "src": "656:10:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SpookyUSDC_$769",
+                "typeString": "contract SpookyUSDC"
+              }
+            },
+            "id": 777,
+            "nodeType": "InheritanceSpecifier",
+            "src": "656:10:11"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 778,
+              "name": "RoboController",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3633,
+              "src": "668:14:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RoboController_$3633",
+                "typeString": "contract RoboController"
+              }
+            },
+            "id": 779,
+            "nodeType": "InheritanceSpecifier",
+            "src": "668:14:11"
+          }
+        ],
+        "contractDependencies": [
+          586,
+          748,
+          769,
+          906,
+          976,
+          1001,
+          1116,
+          1530,
+          1585,
+          1615,
+          3633,
+          4036,
+          4192,
+          5020
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 808,
+        "linearizedBaseContracts": [
+          808,
+          3633,
+          5020,
+          769,
+          4036,
+          4192,
+          748,
+          586,
+          906,
+          1585,
+          1530,
+          976,
+          1116,
+          1001,
+          1615
+        ],
+        "name": "leverageTest",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 782,
+            "libraryName": {
+              "contractScope": null,
+              "id": 780,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1800,
+              "src": "695:8:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$1800",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "689:27:11",
+            "typeName": {
+              "id": 781,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "708:7:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "constant": true,
+            "id": 785,
+            "mutability": "constant",
+            "name": "USDC",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 808,
+            "src": "721:66:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 783,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "721:7:11",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307830343036384441364338334146434641306531336261313541363639363636323333354435423735",
+              "id": 784,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "745:42:11",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              },
+              "value": "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 788,
+            "mutability": "constant",
+            "name": "WFTM",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 808,
+            "src": "793:66:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 786,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "793:7:11",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307832316265333730443533313266343463423432636533373742433962386130634546314134433833",
+              "id": 787,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "817:42:11",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              },
+              "value": "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 791,
+            "mutability": "constant",
+            "name": "baseSymbol",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 808,
+            "src": "865:35:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 789,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "865:6:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "55534443",
+              "id": 790,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "894:6:11",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_d6aca1be9729c13d677335161321649cccae6a591554772516700f986f942eaa",
+                "typeString": "literal_string \"USDC\""
+              },
+              "value": "USDC"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 794,
+            "mutability": "constant",
+            "name": "shortSymbol",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 808,
+            "src": "906:35:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 792,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "906:6:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "46544d",
+              "id": 793,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "936:5:11",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_cc4e633c9cae61b77e4385d3d5205a5c37601a7ddc42d63e8c15542a49c8948f",
+                "typeString": "literal_string \"FTM\""
+              },
+              "value": "FTM"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 806,
+              "nodeType": "Block",
+              "src": "1058:2:11",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 807,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "hexValue": "4c4556455241474554455354",
+                    "id": 797,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "992:14:11",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_7b7b1c2a3c35662f654655cca6d7beafdc649d21a915f3bc5be80ac870bb8466",
+                      "typeString": "literal_string \"LEVERAGETEST\""
+                    },
+                    "value": "LEVERAGETEST"
+                  },
+                  {
+                    "argumentTypes": null,
+                    "hexValue": "74657374",
+                    "id": 798,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1008:6:11",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_9c22ff5f21f0b81b113e63f7db6da94fedef11b2119b4088b89664fb9a3cb658",
+                      "typeString": "literal_string \"test\""
+                    },
+                    "value": "test"
+                  },
+                  {
+                    "argumentTypes": null,
+                    "hexValue": "38",
+                    "id": 799,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1016:1:11",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_8_by_1",
+                      "typeString": "int_const 8"
+                    },
+                    "value": "8"
+                  }
+                ],
+                "id": 800,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 796,
+                  "name": "ERC20Detailed",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1585,
+                  "src": "978:13:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_ERC20Detailed_$1585_$",
+                    "typeString": "type(contract ERC20Detailed)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "978:40:11"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 802,
+                    "name": "USDC",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 785,
+                    "src": "1042:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 803,
+                    "name": "WFTM",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 788,
+                    "src": "1048:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 804,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 801,
+                  "name": "RoboController",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3633,
+                  "src": "1027:14:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_RoboController_$3633_$",
+                    "typeString": "type(contract RoboController)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1027:26:11"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 795,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "959:2:11"
+            },
+            "returnParameters": {
+              "id": 805,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1058:0:11"
+            },
+            "scope": 808,
+            "src": "948:112:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 809,
+        "src": "597:465:11"
+      }
+    ],
+    "src": "32:1030:11"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5061014e806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80633ad184e41461005c578063668ecbf21461008057806368bde41f14610088578063b2ad2f0f14610090578063e43e7b9414610098575b600080fd5b6100646100a0565b604080516001600160a01b039092168252519081900360200190f35b6100646100b8565b6100646100d0565b6100646100e8565b610064610100565b73e45ac34e528907d0a0239ab5db507688070b20bf90565b7330872e4fc4edbfd7a352bfc2463eb4fae9c0908690565b73260e596dabe3afc463e75b6cc05d8c46acacfb0990565b735aa53f03197e08c4851cad8c92c7922da5857e5d90565b73e0654c8e6fd4d733349ac7e09f6f23da256bf4759056fea2646970667358221220e7aa8abeb9a920b890462ccd8f97781e673fd2c27def2e61a2618c373404e8b064736f6c634300060c0033",
+  "bytecodeSha1": "685c6f1e364569ea43a1a928a09fe336aab5df48",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "ScreamUSDC",
+  "coverageMap": {
+    "branches": {
+      "11": {},
+      "4": {},
+      "5": {},
+      "8": {}
+    },
+    "statements": {
+      "11": {
+        "ScreamUSDC.lendPlatform": {
+          "0": [
+            282,
+            331
+          ]
+        }
+      },
+      "4": {},
+      "5": {
+        "Scream.borrowPlatform": {
+          "3": [
+            1318,
+            1367
+          ]
+        },
+        "Scream.compLpAddress": {
+          "1": [
+            1731,
+            1780
+          ]
+        },
+        "Scream.compTokenAddress": {
+          "4": [
+            1596,
+            1645
+          ]
+        },
+        "Scream.comptrollerAddress": {
+          "2": [
+            1458,
+            1507
+          ]
+        }
+      },
+      "8": {}
+    }
+  },
+  "dependencies": [
+    "BORROW",
+    "ILend",
+    "LEND",
+    "REWARDS",
+    "SafeMath",
+    "Scream"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100575760003560e01c80633ad184e41461005c578063668ecbf21461008057806368bde41f14610088578063b2ad2f0f14610090578063e43e7b9414610098575b600080fd5b6100646100a0565b604080516001600160a01b039092168252519081900360200190f35b6100646100b8565b6100646100d0565b6100646100e8565b610064610100565b73e45ac34e528907d0a0239ab5db507688070b20bf90565b7330872e4fc4edbfd7a352bfc2463eb4fae9c0908690565b73260e596dabe3afc463e75b6cc05d8c46acacfb0990565b735aa53f03197e08c4851cad8c92c7922da5857e5d90565b73e0654c8e6fd4d733349ac7e09f6f23da256bf4759056fea2646970667358221220e7aa8abeb9a920b890462ccd8f97781e673fd2c27def2e61a2618c373404e8b064736f6c634300060c0033",
+  "deployedSourceMap": "173:167:11:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;209:129;;;:::i;:::-;;;;-1:-1:-1;;;;;209:129:11;;;;;;;;;;;;;;1657:130:5;;;:::i;1379:135::-;;;:::i;1235:139::-;;;:::i;1519:133::-;;;:::i;209:129:11:-;289:42;209:129;:::o;1657:130:5:-;1738:42;1657:130;:::o;1379:135::-;1465:42;1379:135;:::o;1235:139::-;1325:42;1235:139;:::o;1519:133::-;1603:42;1519:133;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    173,
+    340
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x57 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x3AD184E4 EQ PUSH2 0x5C JUMPI DUP1 PUSH4 0x668ECBF2 EQ PUSH2 0x80 JUMPI DUP1 PUSH4 0x68BDE41F EQ PUSH2 0x88 JUMPI DUP1 PUSH4 0xB2AD2F0F EQ PUSH2 0x90 JUMPI DUP1 PUSH4 0xE43E7B94 EQ PUSH2 0x98 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x64 PUSH2 0xA0 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0x64 PUSH2 0xB8 JUMP JUMPDEST PUSH2 0x64 PUSH2 0xD0 JUMP JUMPDEST PUSH2 0x64 PUSH2 0xE8 JUMP JUMPDEST PUSH2 0x64 PUSH2 0x100 JUMP JUMPDEST PUSH20 0xE45AC34E528907D0A0239AB5DB507688070B20BF SWAP1 JUMP JUMPDEST PUSH20 0x30872E4FC4EDBFD7A352BFC2463EB4FAE9C09086 SWAP1 JUMP JUMPDEST PUSH20 0x260E596DABE3AFC463E75B6CC05D8C46ACACFB09 SWAP1 JUMP JUMPDEST PUSH20 0x5AA53F03197E08C4851CAD8C92C7922DA5857E5D SWAP1 JUMP JUMPDEST PUSH20 0xE0654C8E6FD4D733349AC7E09F6F23DA256BF475 SWAP1 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xE7 0xAA DUP11 0xBE 0xB9 0xA9 KECCAK256 0xB8 SWAP1 CHAINID 0x2C 0xCD DUP16 SWAP8 PUSH25 0x1E673FD2C27DEF2E61A2618C373404E8B064736F6C63430006 0xC STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "MSTORE",
+      "path": "11"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "CALLVALUE",
+      "path": "11"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "ISZERO",
+      "path": "11"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "REVERT",
+      "path": "11"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "CALLDATASIZE",
+      "path": "11"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "LT",
+      "path": "11"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x57"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "CALLDATALOAD",
+      "path": "11"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "SHR",
+      "path": "11"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0x3AD184E4"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "EQ",
+      "path": "11"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x5C"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0x668ECBF2"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "EQ",
+      "path": "11"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x80"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0x68BDE41F"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "EQ",
+      "path": "11"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x88"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0xB2AD2F0F"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "EQ",
+      "path": "11"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x90"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "77": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0xE43E7B94"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "EQ",
+      "path": "11"
+    },
+    "83": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x98"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "88": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "90": {
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "91": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        173,
+        340
+      ],
+      "op": "REVERT",
+      "path": "11"
+    },
+    "92": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "93": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x64"
+    },
+    "96": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0xA0"
+    },
+    "99": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "jump": "i",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "JUMP",
+      "path": "11"
+    },
+    "100": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "101": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "103": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "104": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "MLOAD",
+      "path": "11"
+    },
+    "105": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "107": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "109": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "111": {
+      "op": "SHL"
+    },
+    "112": {
+      "op": "SUB"
+    },
+    "113": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "114": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "SWAP3",
+      "path": "11"
+    },
+    "115": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "AND",
+      "path": "11"
+    },
+    "116": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "DUP3",
+      "path": "11"
+    },
+    "117": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "MSTORE",
+      "path": "11"
+    },
+    "118": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "MLOAD",
+      "path": "11"
+    },
+    "119": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "120": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "DUP2",
+      "path": "11"
+    },
+    "121": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "122": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "SUB",
+      "path": "11"
+    },
+    "123": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x20"
+    },
+    "125": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "ADD",
+      "path": "11"
+    },
+    "126": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "127": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "RETURN",
+      "path": "11"
+    },
+    "128": {
+      "fn": "Scream.compLpAddress",
+      "offset": [
+        1657,
+        1787
+      ],
+      "op": "JUMPDEST",
+      "path": "5"
+    },
+    "129": {
+      "fn": "Scream.compLpAddress",
+      "offset": [
+        1657,
+        1787
+      ],
+      "op": "PUSH2",
+      "path": "5",
+      "value": "0x64"
+    },
+    "132": {
+      "fn": "Scream.compLpAddress",
+      "offset": [
+        1657,
+        1787
+      ],
+      "op": "PUSH2",
+      "path": "5",
+      "value": "0xB8"
+    },
+    "135": {
+      "fn": "Scream.compLpAddress",
+      "jump": "i",
+      "offset": [
+        1657,
+        1787
+      ],
+      "op": "JUMP",
+      "path": "5"
+    },
+    "136": {
+      "fn": "Scream.comptrollerAddress",
+      "offset": [
+        1379,
+        1514
+      ],
+      "op": "JUMPDEST",
+      "path": "5"
+    },
+    "137": {
+      "fn": "Scream.comptrollerAddress",
+      "offset": [
+        1379,
+        1514
+      ],
+      "op": "PUSH2",
+      "path": "5",
+      "value": "0x64"
+    },
+    "140": {
+      "fn": "Scream.comptrollerAddress",
+      "offset": [
+        1379,
+        1514
+      ],
+      "op": "PUSH2",
+      "path": "5",
+      "value": "0xD0"
+    },
+    "143": {
+      "fn": "Scream.comptrollerAddress",
+      "jump": "i",
+      "offset": [
+        1379,
+        1514
+      ],
+      "op": "JUMP",
+      "path": "5"
+    },
+    "144": {
+      "fn": "Scream.borrowPlatform",
+      "offset": [
+        1235,
+        1374
+      ],
+      "op": "JUMPDEST",
+      "path": "5"
+    },
+    "145": {
+      "fn": "Scream.borrowPlatform",
+      "offset": [
+        1235,
+        1374
+      ],
+      "op": "PUSH2",
+      "path": "5",
+      "value": "0x64"
+    },
+    "148": {
+      "fn": "Scream.borrowPlatform",
+      "offset": [
+        1235,
+        1374
+      ],
+      "op": "PUSH2",
+      "path": "5",
+      "value": "0xE8"
+    },
+    "151": {
+      "fn": "Scream.borrowPlatform",
+      "jump": "i",
+      "offset": [
+        1235,
+        1374
+      ],
+      "op": "JUMP",
+      "path": "5"
+    },
+    "152": {
+      "fn": "Scream.compTokenAddress",
+      "offset": [
+        1519,
+        1652
+      ],
+      "op": "JUMPDEST",
+      "path": "5"
+    },
+    "153": {
+      "fn": "Scream.compTokenAddress",
+      "offset": [
+        1519,
+        1652
+      ],
+      "op": "PUSH2",
+      "path": "5",
+      "value": "0x64"
+    },
+    "156": {
+      "fn": "Scream.compTokenAddress",
+      "offset": [
+        1519,
+        1652
+      ],
+      "op": "PUSH2",
+      "path": "5",
+      "value": "0x100"
+    },
+    "159": {
+      "fn": "Scream.compTokenAddress",
+      "jump": "i",
+      "offset": [
+        1519,
+        1652
+      ],
+      "op": "JUMP",
+      "path": "5"
+    },
+    "160": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "161": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        289,
+        331
+      ],
+      "op": "PUSH20",
+      "path": "11",
+      "statement": 0,
+      "value": "0xE45AC34E528907D0A0239AB5DB507688070B20BF"
+    },
+    "182": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "183": {
+      "fn": "ScreamUSDC.lendPlatform",
+      "jump": "o",
+      "offset": [
+        209,
+        338
+      ],
+      "op": "JUMP",
+      "path": "11"
+    },
+    "184": {
+      "fn": "Scream.compLpAddress",
+      "offset": [
+        1657,
+        1787
+      ],
+      "op": "JUMPDEST",
+      "path": "5"
+    },
+    "185": {
+      "fn": "Scream.compLpAddress",
+      "offset": [
+        1738,
+        1780
+      ],
+      "op": "PUSH20",
+      "path": "5",
+      "statement": 1,
+      "value": "0x30872E4FC4EDBFD7A352BFC2463EB4FAE9C09086"
+    },
+    "206": {
+      "fn": "Scream.compLpAddress",
+      "offset": [
+        1657,
+        1787
+      ],
+      "op": "SWAP1",
+      "path": "5"
+    },
+    "207": {
+      "fn": "Scream.compLpAddress",
+      "jump": "o",
+      "offset": [
+        1657,
+        1787
+      ],
+      "op": "JUMP",
+      "path": "5"
+    },
+    "208": {
+      "fn": "Scream.comptrollerAddress",
+      "offset": [
+        1379,
+        1514
+      ],
+      "op": "JUMPDEST",
+      "path": "5"
+    },
+    "209": {
+      "fn": "Scream.comptrollerAddress",
+      "offset": [
+        1465,
+        1507
+      ],
+      "op": "PUSH20",
+      "path": "5",
+      "statement": 2,
+      "value": "0x260E596DABE3AFC463E75B6CC05D8C46ACACFB09"
+    },
+    "230": {
+      "fn": "Scream.comptrollerAddress",
+      "offset": [
+        1379,
+        1514
+      ],
+      "op": "SWAP1",
+      "path": "5"
+    },
+    "231": {
+      "fn": "Scream.comptrollerAddress",
+      "jump": "o",
+      "offset": [
+        1379,
+        1514
+      ],
+      "op": "JUMP",
+      "path": "5"
+    },
+    "232": {
+      "fn": "Scream.borrowPlatform",
+      "offset": [
+        1235,
+        1374
+      ],
+      "op": "JUMPDEST",
+      "path": "5"
+    },
+    "233": {
+      "fn": "Scream.borrowPlatform",
+      "offset": [
+        1325,
+        1367
+      ],
+      "op": "PUSH20",
+      "path": "5",
+      "statement": 3,
+      "value": "0x5AA53F03197E08C4851CAD8C92C7922DA5857E5D"
+    },
+    "254": {
+      "fn": "Scream.borrowPlatform",
+      "offset": [
+        1235,
+        1374
+      ],
+      "op": "SWAP1",
+      "path": "5"
+    },
+    "255": {
+      "fn": "Scream.borrowPlatform",
+      "jump": "o",
+      "offset": [
+        1235,
+        1374
+      ],
+      "op": "JUMP",
+      "path": "5"
+    },
+    "256": {
+      "fn": "Scream.compTokenAddress",
+      "offset": [
+        1519,
+        1652
+      ],
+      "op": "JUMPDEST",
+      "path": "5"
+    },
+    "257": {
+      "fn": "Scream.compTokenAddress",
+      "offset": [
+        1603,
+        1645
+      ],
+      "op": "PUSH20",
+      "path": "5",
+      "statement": 4,
+      "value": "0xE0654C8E6FD4D733349AC7E09F6F23DA256BF475"
+    },
+    "278": {
+      "fn": "Scream.compTokenAddress",
+      "offset": [
+        1519,
+        1652
+      ],
+      "op": "SWAP1",
+      "path": "5"
+    },
+    "279": {
+      "fn": "Scream.compTokenAddress",
+      "jump": "o",
+      "offset": [
+        1519,
+        1652
+      ],
+      "op": "JUMP",
+      "path": "5"
+    }
+  },
+  "sha1": "99ec45aa093f87ac362c23c77611fbfbd04c1c29",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.6.12;\nimport \"../farms/spooky.sol\";\nimport \"../lenders/scream.sol\";\nimport \"../token.sol\";\nimport \"../vaultHelpers.sol\";\n\ncontract ScreamUSDC is Scream {\n    function lendPlatform() public view override returns (address) {\n        return 0xE45Ac34E528907d0A0239ab5Db507688070B20bf;\n    }\n}\n\ncontract SpookyUSDC is Spooky {\n    function farmLP() public view override returns (address) {\n        return 0x2b4C76d0dc16BE1C31D4C1DC53bF9B45987Fc75c;\n    }\n    function farmPid() public view override returns (uint256) {\n        return 2;\n    }\n}\n    \ncontract leverageTest is ERC20, ERC20Detailed, ScreamUSDC, SpookyUSDC, RoboController {\n    using SafeMath for uint256;\n    address constant USDC = 0x04068DA6C83AFCFA0e13ba15A6696662335D5B75;\n    address constant WFTM = 0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83;\n    string constant baseSymbol = \"USDC\";\n    string constant shortSymbol = \"FTM\";\n\n    constructor() public \n        ERC20Detailed(\"LEVERAGETEST\", \"test\", 8)\n        RoboController(USDC, WFTM)\n    {}\n}",
+  "sourceMap": "173:167:11:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/vaults/USDCScreamSpooky.sol",
+  "type": "contract"
+}

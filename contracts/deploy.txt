@@ -1,0 +1,12 @@
+
+brownie compile
+brownie console --network FTM
+
+accounts.load("dev")
+vault = leverageTest.deploy({"from": accounts[0]})
+vault.deposit(5000,{'from':accounts[0]})
+vault.deployStrat({'from':accounts[0]})
+vault.calcCollateral()
+vault.rebalanceCollateral()
+vaule.calcCollateral()
+vault.undeployFromStrat(4500, {'from' : accounts[0]})
