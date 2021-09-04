@@ -217,7 +217,7 @@ abstract contract RoboController is ReentrancyGuard, Ownable, RoboVault {
             require(_amount <= depositLimit, "Over deposit Limit");
             shares = _amount;
         } else {
-            uint256 currentBalance = (pool.mul(balanceOf(msg.sender)).div(totalSupply());
+            uint256 currentBalance = pool.mul(balanceOf(msg.sender)).div(totalSupply());
             require(_amount.add(currentBalance) <= depositLimit, "Over deposit Limit");
             shares = (_amountAdj.mul(totalSupply())).div(pool);
         }
@@ -293,6 +293,7 @@ abstract contract RoboController is ReentrancyGuard, Ownable, RoboVault {
 
     /// rebalances RoboVault strat position to within target collateral range 
     function rebalanceCollateral() external onlyKeepers {
+        require(calcCollateral() > collatUpper || calcCollateral() < collatUpper, "Within Range" );
         uint256 shortPos = balanceDebt();
         uint256 lendPos = balanceLend();
         _operationalFeeHarvest();

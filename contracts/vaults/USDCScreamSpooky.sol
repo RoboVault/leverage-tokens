@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.12;
 import "../farms/spooky.sol";
-import "../lenders/scream.sol";
+import "../lenders/cream.sol";
 import "../token.sol";
 import "../vaultHelpers.sol";
 
-contract ScreamUSDC is Scream {
+contract CreamUSDC is Cream {
     function lendPlatform() public view override returns (address) {
-        return 0xE45Ac34E528907d0A0239ab5Db507688070B20bf;
+        return 0x328A7b4d538A2b3942653a9983fdA3C12c571141;
     }
 }
 
@@ -20,7 +20,7 @@ contract SpookyUSDC is Spooky {
     }
 }
     
-contract leverageTest is ERC20, ERC20Detailed, ScreamUSDC, SpookyUSDC, RoboController {
+contract leverageUSDC is ERC20, ERC20Detailed, CreamUSDC, SpookyUSDC, RoboController {
     using SafeMath for uint256;
     address constant USDC = 0x04068DA6C83AFCFA0e13ba15A6696662335D5B75;
     address constant WFTM = 0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83;
