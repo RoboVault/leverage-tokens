@@ -1,4 +1,4 @@
-# Leveraged Coin MVP for Loan Saver Submission
+# Leveraged Vault for Loan Saver Submission
 
 This submission diverges somewhat from the Challenge Description however we believe it acheives the same outcome while having some other additional features that will be incredibly useful for users.
 
