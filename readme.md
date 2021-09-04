@@ -27,10 +27,17 @@ amt = 5000
 vault = leverageTest.deploy({"from": accounts[0]})
 
 usdc = ERC20.at('0x04068DA6C83AFCFA0e13ba15A6696662335D5B75')
+
 usdc.approve(vault, amt,{'from':accounts[0]})
+
 vault.deposit(amt,{'from':accounts[0]}) 
+
 vault.deployStrat({'from':accounts[0]}) 
+
 vault.calcCollateral() 
+
 vault.rebalanceCollateral()
+
 vaule.calcCollateral() 
+
 vault.undeployFromStrat(2500, {'from' : accounts[0]})
