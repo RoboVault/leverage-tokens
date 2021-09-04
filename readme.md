@@ -41,3 +41,8 @@ vault.rebalanceCollateral()
 vaule.calcCollateral() 
 
 vault.undeployFromStrat(2500, {'from' : accounts[0]})
+
+# Additional References 
+
+High Level Diagram : https://github.com/RoboVault/leverage-tokens/blob/master/CREAM%20LoanSaver.pdf
+Vault Strategy : https://docs.robo-vault.com/robovault/lend-hedge-farming
