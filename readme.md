@@ -14,7 +14,7 @@ The front end allowing users to enter these vaults would follow RoboVaults exist
 # Contracts 
 The core strategy & rebalancing mechanics can be found in token.sol including inputs for target collateral ratio, number of loops for leverage and logic behind rebalancing in order to save loans from liquidation (rebalanceCollateral) 
 
-# DEPLOYMENT
+# Deployment & Managing Position
 
 To deploy contract deposit funds & deploy to strategy run the following in Brownie (for vault which shorts FTM vs USDC) 
 
