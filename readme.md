@@ -1,4 +1,4 @@
-Leveraged Coin MVP for Loan Saver Submission
+# Leveraged Coin MVP for Loan Saver Submission
 
 This submission diverges somewhat from the Challenge Description however we believe it acheives the same outcome while having some other additional features that will be incredibly useful for users.
 
@@ -9,3 +9,32 @@ These vaults would then be monitored by external keepers constantly checking the
 This archicture means users can deposit assets into a vault following some desired leverage level while having keepers constantly managing assets ensuring over the long term their positions will not be liquidated. This archicture of vaults with specific levels of leverage can be implemented as a leveraged similiar to binanace 3x leverage coins which could be traded on a AMM. One final benefit of having assets being pooled in a single vault leading to significant gas savings while also being flexible enoug
 
 The front end allowing users to enter these vaults would follow RoboVaults existing vaults : https://www.robo-vault.com/
+
+
+# Contracts 
+The core strategy & rebalancing mechanics can be found in token.sol including inputs for target collateral ratio, number of loops for leverage and logic behind rebalancing in order to save loans from liquidation (rebalanceCollateral) 
+
+# DEPLOYMENT
+
+To deploy contract deposit funds & deploy to strategy run the following in Brownie (for vault which shorts FTM vs USDC) 
+
+brownie compile
+brownie console --network FTM
+
+accounts.load("dev") 
+amt = 5000
+
+vault = leverageTest.deploy({"from": accounts[0]})
+
+usdc = ERC20.at('0x04068DA6C83AFCFA0e13ba15A6696662335D5B75')
+usdc.approve(vault, amt,{'from':accounts[0]})
+vault.deposit(amt,{'from':accounts[0]})
+# this deploys funds to the vault strategy by creating a loop of lending / borrowing 
+vault.deployStrat({'from':accounts[0]})
+# this calculates the vaults current collateral ratio
+vault.calcCollateral()
+# this function rebalances collateral ratio back to it's target level when outside of some threshold 
+vault.rebalanceCollateral()
+vaule.calcCollateral()
+# this function undeploys funds from the vaults leveraged position  
+vault.undeployFromStrat(2500, {'from' : accounts[0]})
